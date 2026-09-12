@@ -70,11 +70,11 @@ const Hero = () => {
         <h1 className="title">
           MOJITO
         </h1>
-        <img src="public/images/hero-left-leaf.png"
+        <img src="https://d1yevrzlvg9tda.cloudfront.net/images/hero-left-leaf.png"
         alt="left-leaf"
         className="left-leaf"
         />
-        <img src="public/images/hero-right-leaf.png"
+        <img src="https://d1yevrzlvg9tda.cloudfront.net/images/hero-right-leaf.png"
         alt="right-leaf"
         className="right-leaf"
         />
@@ -98,7 +98,7 @@ const Hero = () => {
       <div className="video absolute inset-0">
         <video 
         ref={videoRef}
-        src="/videos/output.mp4"
+        src="https://d1yevrzlvg9tda.cloudfront.net/videos/output.webm"
         muted
         playsInline
         preload="auto" />
