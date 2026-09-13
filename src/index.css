@@ -7,12 +7,21 @@
     src: url("/fonts/Modern Negra Demo.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "The Last Knight";
+  src: url("/fonts/TheLastKnight-W8wE.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Helps the page load text faster */
+}
+
 @theme {
     --color-yellow: #e7d393;
     --color-white-100: #efefef;
     --font-sans: "Mona Sans", sans-serif;
     --font-modern-negra: "Modern Negra", sans-serif;
     --font-serif: "DM Serif Text", serif;
+    --font-last-knight: "The Last Knight", "sans-serif";
 }
 
 html,
@@ -100,7 +109,7 @@ body {
         @apply relative z-10 min-h-dvh w-full border border-transparent;
 
         h1 {
-            @apply md:mt-32 mt-40 text-8xl md:text-[20vw] leading-none text-center font-modern-negra;
+            @apply md:mt-32 mt-40 text-8xl md:text-[20vw] leading-none text-center font-last-knight;
         }
 
         .left-leaf {

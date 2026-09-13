@@ -16,6 +16,16 @@ const Contact = () => {
             ease:'power1.inOut'
         })
 
+        const timeline2 = gsap.timeline({
+            scrollTrigger:{
+                trigger:'#contact',
+                start:'top center',
+                end:'bottom top',
+                scrub:true
+            },
+            ease:'power1.inOut'
+        })
+
 
         timeline
         .from(titleSplit.words,{
@@ -24,12 +34,14 @@ const Contact = () => {
         .from('#contact h3, #contact p',{
             opacity:0, yPercent:100, stagger:0.02
         })
+
+        timeline2
         .to('#f-right-leaf',{
-            y:'-50', duration:1, ease:'power1.inOut'
-        })
+            y:10
+        },0)
         .to('#f-left-leaf',{
-            y:'-50', duration:1, ease:'power1.inOut'
-        }, '<')
+            y:-0
+        }, 0)
     })
 
   return (
@@ -70,7 +82,7 @@ const Contact = () => {
                         rel="noopener noreferrer"
                         aria-label={social.name}
                         >
-                            <img src={`https://d1yevrzlvg9tda.cloudfront.net/{social.icon}`} />
+                            <img src={`https://d1yevrzlvg9tda.cloudfront.net${social.icon}`} />
                         </a>)
                     })}
                 </div>

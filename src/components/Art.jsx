@@ -24,15 +24,25 @@ const Art = () => {
             .to('.will-fade', {
                 opacity: 0, stagger: 0.2, ease: 'power1.inOut',
             })
-            .fromTo('.masked-img',{
-                scale:0.7,
-                maskPosition:'center',
-                maskSize:'50%',
-            }, {
-                scale: 1.3, maskPosition: 'center', maskSize: '400%',
-                duration: 1, ease: 'power1.inOut', webkitMaskPosition: 'center',
-                webkitMaskSize: '400%',
-            })
+            .fromTo(
+                '.masked-img',
+                {
+                    scale: 0.7,
+                    maskPosition: 'center',
+                    maskSize: '50%',
+                    WebkitMaskPosition: 'center',
+                    WebkitMaskSize: '50%',
+                },
+                {
+                    scale: 1.3,
+                    maskPosition: 'center',
+                    maskSize: '400%',
+                    WebkitMaskPosition: 'center',
+                    WebkitMaskSize: '400%',
+                    duration: 1,
+                    ease: 'power1.inOut',
+                }
+            )
             .to('#masked-content', { opacity: 1, duration: 1, ease: 'power1.inOut' })
     })
     return (
@@ -52,18 +62,21 @@ const Art = () => {
                         <div
                             className="size-full abs-center masked-img"
                             style={{
-                                maskImage: 'url(https://d1yevrzlvg9tda.cloudfront.net/images/mask-img.png)',
-                                WebkitMaskImage: 'url(https://d1yevrzlvg9tda.cloudfront.net/images/mask-img.png)',
+                                maskImage:
+                                    'url(https://d1yevrzlvg9tda.cloudfront.net/images/mask-img.png)',
                                 maskRepeat: 'no-repeat',
-                                WebkitMaskRepeat: 'no-repeat',
                                 maskPosition: 'center',
-                                WebkitMaskPosition: 'center',
                                 maskSize: '50%',
-                                WebkitMaskSize: '50%'
+
+                                WebkitMaskImage:
+                                    'url(https://d1yevrzlvg9tda.cloudfront.net/images/mask-img.png)',
+                                WebkitMaskRepeat: 'no-repeat',
+                                WebkitMaskPosition: 'center',
+                                WebkitMaskSize: '50%',
                             }}
                         >
                             <img
-                                src="https://d1yevrzlvg9tda.cloudfront.net/images/under-img.jpg"
+                                src="https://d1yevrzlvg9tda.cloudfront.net/images/under-img.webp"
                                 alt="cocktail"
                                 className="size-full object-cover"
                             />
