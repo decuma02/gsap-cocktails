@@ -98,7 +98,7 @@ const Hero = () => {
       <div className="video absolute inset-0">
         <video 
         ref={videoRef}
-        src="https://d1yevrzlvg9tda.cloudfront.net/videos/output.webm"
+        src="https://d1yevrzlvg9tda.cloudfront.net/videos/output.mp4"
         muted
         playsInline
         preload="auto" />
