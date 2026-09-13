@@ -37,10 +37,10 @@ const Contact = () => {
 
         timeline2
         .to('#f-right-leaf',{
-            y:10
+            y:100
         },0)
         .to('#f-left-leaf',{
-            y:-0
+            y:-100
         }, 0)
     })
 
